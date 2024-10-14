@@ -9,26 +9,26 @@ final appRouter = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      pageBuilder: _animationConfig,
+      pageBuilder: (context, state) => _animationConfig(context, state, const HomeScreen()),
       builder: (context, state) => const HomeScreen(),
     ),
     GoRoute(
       path: '/buttons',
-      pageBuilder: _animationConfig,
+      pageBuilder: (context, state) => _animationConfig(context, state, const ButtonsScrenn()),
       builder: (context, state) => const ButtonsScrenn(),
     ),
     GoRoute(
       path: '/cards',
-      pageBuilder: _animationConfig,
+      pageBuilder: (context, state) => _animationConfig(context, state, const CardsScreen()),
       builder: (context, state) => const CardsScreen(),
     )
   ],
 );
 
-Page<dynamic> _animationConfig(context, state) {
+Page<dynamic> _animationConfig(BuildContext context, GoRouterState state, Widget child) {
   return CustomTransitionPage(
     key: state.pageKey,
-    child: const HomeScreen(),
+    child: child,
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(1.0, 0.0);
       const end = Offset.zero;

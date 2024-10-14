@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets/config/menu/menu_items.dart';
-import 'package:widgets/config/router/app_router.dart';
-import 'package:widgets/presentation/screens/botones/buttons_screnn.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String name = 'HomeScreen';
   const HomeScreen({super.key});
 
   @override
@@ -32,11 +31,14 @@ class _HomeView extends StatelessWidget {
 }
 
 class _CustomListTitle extends StatelessWidget {
+
+  
+  final MenuItems item;
+
   const _CustomListTitle({
     required this.item,
   });
 
-  final MenuItems item;
 
   @override
   Widget build(BuildContext context) {
