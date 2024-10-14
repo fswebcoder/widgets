@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets/config/menu/menu_items.dart';
+import 'package:widgets/config/router/app_router.dart';
 import 'package:widgets/presentation/screens/botones/buttons_screnn.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -42,7 +44,7 @@ class _CustomListTitle extends StatelessWidget {
     return InkWell(
       splashColor: colors.withAlpha(100), // Cambia el color del splash aquí
       onTap: () {
-        Navigator.pushNamed(context, item.route);
+        context.push(item.route); 
       },
       child: ListTile(
         title: Text(item.title),
