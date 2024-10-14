@@ -44,13 +44,12 @@ class AppTheme {
   ThemeData getTheme() => ThemeData(
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.white,
-      elevation: 4,
+      elevation: 0,
       iconTheme: IconThemeData(color: Colors.black),
       titleTextStyle: TextStyle(color: Colors.black),
     ),
     colorSchemeSeed: colorList[selecterColor],
-    useMaterial3: true,
-
+    useMaterial3: true
   );
 
 }
