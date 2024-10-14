@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets/config/menu/menu_items.dart';
+import 'package:widgets/presentation/screens/botones/buttons_screnn.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,8 +17,6 @@ class HomeScreen extends StatelessWidget {
 }
 
 class _HomeView extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -31,7 +30,6 @@ class _HomeView extends StatelessWidget {
 }
 
 class _CustomListTitle extends StatelessWidget {
- 
   const _CustomListTitle({
     required this.item,
   });
@@ -40,13 +38,11 @@ class _CustomListTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final colors = Theme.of(context).colorScheme.primary;
+    final colors = Theme.of(context).colorScheme.primary;
     return InkWell(
-      splashColor: colors.withAlpha( 
-        100
-      ), // Cambia el color del splash aquí
+      splashColor: colors.withAlpha(100), // Cambia el color del splash aquí
       onTap: () {
-        
+        Navigator.pushNamed(context, item.route);
       },
       child: ListTile(
         title: Text(item.title),
