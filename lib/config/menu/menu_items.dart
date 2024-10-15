@@ -37,5 +37,11 @@ const appMenuItems  = <MenuItems> [
       subTitle: 'SnackBar en flutter',
       route: '/snackbars',
       icon: Icons.info_outline_rounded
+    ),
+     MenuItems(
+      title: 'Animated container',
+      subTitle: 'Contenedor animado en flutter',
+      route: '/animated',
+      icon: Icons.check_box_outline_blank_outlined
     )
 ];

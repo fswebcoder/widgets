@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:widgets/presentation/screens/animated/animated_screen.dart';
 import 'package:widgets/presentation/screens/botones/buttons_screnn.dart';
 import 'package:widgets/presentation/screens/card/cards_screen.dart';
 import 'package:widgets/presentation/screens/home/home_screen.dart';
@@ -33,6 +34,11 @@ final appRouter = GoRouter(
       path: '/snackbars',
       pageBuilder: (context, state) => _animationConfig(context, state, const SnackbarScreen()),
       builder: (context, state) => const SnackbarScreen(),
+    ),
+     GoRoute(
+      path: '/animated',
+      pageBuilder: (context, state) => _animationConfig(context, state, const AnimatedScreen()),
+      builder: (context, state) => const AnimatedScreen(),
     )
   ],
 );
