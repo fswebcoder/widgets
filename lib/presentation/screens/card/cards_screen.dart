@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
   
 const cards = <Map<String, dynamic>>[
   {"elevation": 0.0,"label": "Elevatio 0"},
@@ -20,6 +21,13 @@ class CardsScreen extends StatelessWidget {
         title: const Text('Tarjetas'),
       ),
       body: _CardsView(),
+       floatingActionButton: FloatingActionButton(
+        
+        onPressed: () {
+          context.pop();  
+        },
+        child: const Icon(Icons.arrow_back_ios_new_outlined, color: Colors.white),
+      )
     );
   }
 }

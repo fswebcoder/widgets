@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets/presentation/screens/botones/buttons_screnn.dart';
 import 'package:widgets/presentation/screens/card/cards_screen.dart';
 import 'package:widgets/presentation/screens/home/home_screen.dart';
+import 'package:widgets/presentation/screens/progress/progress_screnn.dart';
+import 'package:widgets/presentation/screens/snackbar/snackbar_screen.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -21,6 +23,16 @@ final appRouter = GoRouter(
       path: '/cards',
       pageBuilder: (context, state) => _animationConfig(context, state, const CardsScreen()),
       builder: (context, state) => const CardsScreen(),
+    ),
+     GoRoute(
+      path: '/progress',
+      pageBuilder: (context, state) => _animationConfig(context, state, const ProgressScrenen()),
+      builder: (context, state) => const ProgressScrenen(),
+    ),
+     GoRoute(
+      path: '/snackbars',
+      pageBuilder: (context, state) => _animationConfig(context, state, const SnackbarScreen()),
+      builder: (context, state) => const SnackbarScreen(),
     )
   ],
 );

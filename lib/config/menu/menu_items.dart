@@ -26,4 +26,16 @@ const appMenuItems  = <MenuItems> [
       route: '/cards',
       icon: Icons.credit_card
     ),
+     MenuItems(
+      title: 'Progress indicator',
+      subTitle: 'Indicador de progreso en flutter, generales y controlados',
+      route: '/progress',
+      icon: Icons.refresh_outlined
+    ),
+    MenuItems(
+      title: 'SnackBar',
+      subTitle: 'SnackBar en flutter',
+      route: '/snackbars',
+      icon: Icons.info_outline_rounded
+    )
 ];
