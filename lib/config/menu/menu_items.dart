@@ -53,7 +53,7 @@ const appMenuItems  = <MenuItems> [
      MenuItems(
       title: 'App tutorial',
       subTitle: 'Tutorial de la app en flutter',
-      route: '/tutoruial',
+      route: '/tutorial',
       icon: Icons.account_circle_rounded
     )
 ];
