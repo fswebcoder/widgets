@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets/presentation/screens/animated/animated_screen.dart';
+import 'package:widgets/presentation/screens/app_tutorial/tutorial_screen.dart';
 import 'package:widgets/presentation/screens/botones/buttons_screnn.dart';
 import 'package:widgets/presentation/screens/card/cards_screen.dart';
 import 'package:widgets/presentation/screens/home/home_screen.dart';
 import 'package:widgets/presentation/screens/progress/progress_screnn.dart';
 import 'package:widgets/presentation/screens/snackbar/snackbar_screen.dart';
+import 'package:widgets/presentation/screens/ui_controls/ui_controls_screnn.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -39,6 +41,16 @@ final appRouter = GoRouter(
       path: '/animated',
       pageBuilder: (context, state) => _animationConfig(context, state, const AnimatedScreen()),
       builder: (context, state) => const AnimatedScreen(),
+    ),
+     GoRoute(
+      path: '/ui_controls',
+      pageBuilder: (context, state) => _animationConfig(context, state, const UiControlsScrenn()),
+      builder: (context, state) => const UiControlsScrenn(),
+    ), 
+    GoRoute(
+      path: '/tutotial',
+      pageBuilder: (context, state) => _animationConfig(context, state, const AppTutorialScreen()),
+      builder: (context, state) => const AppTutorialScreen(),
     )
   ],
 );
