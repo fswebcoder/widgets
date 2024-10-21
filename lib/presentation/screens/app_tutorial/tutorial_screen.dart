@@ -98,7 +98,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
            endReached ? Positioned(
               bottom: 20,
               right: 30,
-              child: FadeInRight(child: ElevatedButton(onPressed: (){context.pop();}, child: Text('Comenzar')))
+              child: FadeInRight(child: ElevatedButton(onPressed: (){context.pop();}, child: const Text('Comenzar')))
                 
              ) : const SizedBox()
         ],
